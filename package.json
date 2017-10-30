@@ -6,7 +6,8 @@
   "homepage": "http://coreui.io/angularjs/",
   "github": "https://github.com/mrholek/CoreUI-AngularJS#readme",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "postinstall": "node -e \"try { require('fs').symlinkSync(require('path').resolve('node_modules/@bower_components'), 'bower_components', 'junction') } catch (e) { }\""
   },
   "repository": {
     "type": "git",
@@ -30,5 +31,17 @@
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/mrholek/CoreUI-AngularJS/issues"
+  },
+  "dependencies": {
+    "@bower_components/chart.js": "chartjs/Chart.js#^2.3.0",
+    "@bower_components/fontawesome": "FortAwesome/Font-Awesome#*",
+    "@bower_components/jquery": "jquery/jquery-dist#^3.0.0",
+    "@bower_components/pace": "HubSpot/pace#*",
+    "@bower_components/simple-line-icons": "thesabbir/simple-line-icons#*",
+    "@bower_components/tether": "HubSpot/tether#*",
+    "@bower_components/bootstrap": "twbs/bootstrap#^v4.0.0-beta.2"
+  },
+  "engines": {
+    "yarn": ">= 1.0.0"
   }
 }
